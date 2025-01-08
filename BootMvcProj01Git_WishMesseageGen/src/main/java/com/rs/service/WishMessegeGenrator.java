@@ -3,6 +3,8 @@ package com.rs.service;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+import org.springframework.stereotype.Service;
+@Service
 public class WishMessegeGenrator implements IWishMessegeGenrator {
 
 	@Override
@@ -25,7 +27,12 @@ public class WishMessegeGenrator implements IWishMessegeGenrator {
 		LocalDate ld= LocalDate.now();
 		int month=ld.getMonthValue();
 		String msg=null;
-		
+		if(month>=6  && month<=9)
+			msg="rainy season";
+		else if(month<=5 && month>=3)
+			msg= "Summer Season";
+		else 
+			msg="winter season";
 		
 		return msg;
 	}
