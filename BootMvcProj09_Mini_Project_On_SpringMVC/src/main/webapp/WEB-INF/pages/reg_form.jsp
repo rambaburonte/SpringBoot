@@ -1,6 +1,6 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="f"  %>
 
-<f:form action="/add">
+<f:form modelAttribute="e" action="add" >
 
 <table>
 
@@ -15,7 +15,5 @@
 </tr>
 <tr><td> <input type="submit" value="Register"> &nbsp;&nbsp; <input type="reset" value="calcel"> <td/></tr>
 </table>
-
-
 </f:form>
 

@@ -18,17 +18,13 @@
 		<td>  ${i.sal} </td><td>${i.mail} </td>
 		<td><a href="edit?no=${i.id}"><img src="images/edit.png" width="30px" height="30px"></a> &nbsp;&nbsp;&nbsp;
 		<a href="delete?no=${i.id }"><img src="images/delete.png" width="30px" height="30px"></a></td>
-	
-	
 	</tr>
 	
 	
 	</c:forEach>
 	</table>
-	<br/><br><br><br><br><br><br><br>
-	<a href=""><img src="images/add.png" width="40px" height="50px"></a>
-
-
+	<br/>
+	<a href="add"><img src="images/add.png" width="40px" height="50px"></a>
 </c:when>
 <c:otherwise>Employees not found </c:otherwise>
 </c:choose>
