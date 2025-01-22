@@ -1,12 +1,21 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="f"  %>
 
-</body>
-</html>
+<f:form action="/add">
+
+<table>
+
+<tr><td> EMployee name</td>
+<td><f:input path="name"/></td>
+</tr>
+<tr><td> Employee sal </td>
+<td><f:input path="sal"/></td>
+</tr>
+<tr><td>Employee email</td>
+<td	><f:input path="mail"/></td>
+</tr>
+<tr><td> <input type="submit" value="Register"> &nbsp;&nbsp; <input type="reset" value="calcel"> <td/></tr>
+</table>
+
+
+</f:form>
+

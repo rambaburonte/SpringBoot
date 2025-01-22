@@ -32,6 +32,7 @@
 </c:when>
 <c:otherwise>Employees not found </c:otherwise>
 </c:choose>
+<h1 style="text-align: center;color: teal;">${msg}</h1>
 <br>
 <br >
 

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.rs.entity.EmployeeEntity;
@@ -32,9 +33,16 @@ public class EmpController {
 	}
 	@GetMapping("/add")
 	public String saveEmp(@ModelAttribute("e") EmployeeEntity e) {
-		
 		return "reg_form";
-		
+			
+	}
+	
+	@PostMapping("/add")
+	public String registerEmp(@ModelAttribute("e") EmployeeEntity e,Map<String,Object> map) {
+		String msg=emps.addEmp(e);
+		map.put("eList",emps.showAll());
+		map.put("msg",msg);
+		return "empreport";
 		
 	}
 	
