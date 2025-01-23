@@ -1,5 +1,5 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="f"  %>
-
+<a href="./" style="text-align: left;"><img src="images/home.png" width="30px" height="30px"></a>
 <f:form modelAttribute="e" action="add" >
 
 <table>

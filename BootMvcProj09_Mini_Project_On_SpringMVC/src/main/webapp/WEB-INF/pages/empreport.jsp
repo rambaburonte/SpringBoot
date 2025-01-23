@@ -17,7 +17,7 @@
 		<td>  ${i.id} </td><td>${i.name}</td>
 		<td>  ${i.sal} </td><td>${i.mail} </td>
 		<td><a href="edit?no=${i.id}"><img src="images/edit.png" width="30px" height="30px"></a> &nbsp;&nbsp;&nbsp;
-		<a href="delete?no=${i.id }"><img src="images/delete.png" width="30px" height="30px"></a></td>
+		<a href="delete?no=${i.id }" onclick="return confirm('Are you deleting Employee?')"><img src="images/delete.png" width="30px" height="30px"></a></td>
 	</tr>
 	
 	
