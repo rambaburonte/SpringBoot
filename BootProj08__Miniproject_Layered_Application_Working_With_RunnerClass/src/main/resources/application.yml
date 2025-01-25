@@ -1,0 +1,61 @@
+spring:
+  application:
+    name: BootProj08__Miniproject_Layered_Application_Working_With_RunnerClass
+  profiles:
+    active: dev
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: test
+   
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: SYSTEM
+    password: RAMBABU
+    type: com.zaxxer.hikari.HikariDataSource
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+  datasource:
+    type: org.apache.commons.dbcp2.BasicDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mydb
+    username: root
+    password: RAMBABU
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mydb
+    username: root
+    password: RAMBABU
+    type: oracle.ucp.jdbc.PoolDataSourceImpl
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: uat
+
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: SYSTEM
+    password: RAMBABU
+    type: org.apache.tomcat.jdbc.pool.DataSource
