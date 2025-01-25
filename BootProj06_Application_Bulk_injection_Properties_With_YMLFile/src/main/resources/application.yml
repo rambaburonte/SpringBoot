@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: BootProj06_Application_Bulk_injection_Properties_With_YMLF
+emp:
+  ename: ram
+  add: hyd
+  email: r@gmail.com
+  favColors:
+    - red
+    - blue
+    - green
+  friends :
+    - anil
+    - prem
+    - raj
+    - akhil
+  phone:
+    - 777777
+    - 444444
+    - 555555
+    - 111111
+  id-details:
+    adhar: 1818156
+    voter: 7455874
+    pan : 5489623
+  cd:
+    cname: TCS
+    location: tcs-deccan
+    desg: Devloper-II
+    sal: 9000
+    sal1: 110
+    sal2: 465
+    sal3: 856
+    
+    
+    
